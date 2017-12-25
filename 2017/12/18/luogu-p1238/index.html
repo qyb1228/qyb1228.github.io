@@ -1,0 +1,261 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo_miccall.png"/>
+	 <link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			
+    <title>
+    JC Zhang
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">JC-Zhang</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">Home</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">categories</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Algorithm/">Algorithm</a></li><li><a class="category-link" href="/categories/C/">C++</a></li><li><a class="category-link" href="/categories/Essay/">Essay</a></li><li><a class="category-link" href="/categories/Problem/">Problem</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">archives</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/9999/12/">December 9999</a></li><li><a class="archive-link" href="/archives/2017/12/">December 2017</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="About">
+		                About
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="Link">
+		                Link
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="Gallery">
+		                Gallery
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tags/" title="Tags">
+		                Tags
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		                <li><a href="https://github.com/qyb1228.github.io" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		            
+		            
+		            
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://img.tuku.cn/file_big/201708/5d17111c9d5a4a84af06585e8cf62980.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >luogu p1238</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="走迷宫"><a href="#走迷宫" class="headerlink" title="走迷宫"></a>走迷宫</h1><p>好吧，我承认我是很 <strong><em>傻</em></strong> ，在这道题上犯了很 <strong><em>傻</em></strong> 的错误！！！</p>
+<p><strong>數組還開小了</strong></p>
+<p>其实太简单了······qwq</p>
+<a id="more"></a>
+<h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><h3 id="題目描述"><a href="#題目描述" class="headerlink" title="題目描述"></a>題目描述</h3><p>有一个<code>m * n</code> 格的迷宫(表示有<code>m</code>行、<code>n</code>列)，其中有可走的也有不可走的，如果用1表示可以走，0表示不可以走，读入这<code>m * n</code>个数据和起始点、结束点(起始点和结束点都是用两个数据来描述的，分别表示这个点的行号和列号)。现在要你编程找出所有可行的道路，要求所走的路中没有重复的点，走时只能是上下左右四个方向。如果一条路都不可行，则输出相应信息(用-l表示无路)。</p>
+<p><strong>优先顺序：左上右下</strong></p>
+<h3 id="輸入輸出格式"><a href="#輸入輸出格式" class="headerlink" title="輸入輸出格式"></a>輸入輸出格式</h3><h4 id="輸入格式"><a href="#輸入格式" class="headerlink" title="輸入格式"></a>輸入格式</h4><p>第一行是两个数m，n(1&lt;m，n&lt;15)，接下来是m行n列由1和0组成的数据，最后两行是起始点和结束点。</p>
+<h4 id="輸出格式"><a href="#輸出格式" class="headerlink" title="輸出格式"></a>輸出格式</h4><p>所有可行的路径，描述一个点时用(x，y)的形式，除开始点外，其他的都要用“一&gt;”表示方向。</p>
+<p>如果没有一条可行的路则输出-1。</p>
+<h3 id="輸入輸出樣例"><a href="#輸入輸出樣例" class="headerlink" title="輸入輸出樣例"></a>輸入輸出樣例</h3><h4 id="輸入樣例-1："><a href="#輸入樣例-1：" class="headerlink" title="輸入樣例#1："></a>輸入樣例#1：</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">5</span> <span class="number">6</span></span><br><span class="line"><span class="number">1</span> <span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="number">0</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span> <span class="number">1</span> <span class="number">0</span> <span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="number">5</span> <span class="number">6</span></span><br></pre></td></tr></table></figure>
+<h4 id="輸出樣例-1："><a href="#輸出樣例-1：" class="headerlink" title="輸出樣例#1："></a>輸出樣例#1：</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">1</span>,<span class="number">1</span>)-&gt;(<span class="number">2</span>,<span class="number">1</span>)-&gt;(<span class="number">2</span>,<span class="number">2</span>)-&gt;(<span class="number">2</span>,<span class="number">3</span>)-&gt;(<span class="number">2</span>,<span class="number">4</span>)-&gt;(<span class="number">2</span>,<span class="number">5</span>)-&gt;(<span class="number">3</span>,<span class="number">5</span>)-&gt;(<span class="number">3</span>,<span class="number">4</span>)-&gt;(<span class="number">3</span>,<span class="number">3</span>)-&gt;(<span class="number">4</span>,<span class="number">3</span>)-&gt;(<span class="number">4</span>,<span class="number">4</span>)-&gt;(<span class="number">4</span>,<span class="number">5</span>)-&gt;(<span class="number">5</span>,<span class="number">5</span>)-&gt;(<span class="number">5</span>,<span class="number">6</span>)</span><br><span class="line">(<span class="number">1</span>,<span class="number">1</span>)-&gt;(<span class="number">2</span>,<span class="number">1</span>)-&gt;(<span class="number">2</span>,<span class="number">2</span>)-&gt;(<span class="number">2</span>,<span class="number">3</span>)-&gt;(<span class="number">2</span>,<span class="number">4</span>)-&gt;(<span class="number">2</span>,<span class="number">5</span>)-&gt;(<span class="number">3</span>,<span class="number">5</span>)-&gt;(<span class="number">3</span>,<span class="number">4</span>)-&gt;(<span class="number">4</span>,<span class="number">4</span>)-&gt;(<span class="number">4</span>,<span class="number">5</span>)-&gt;(<span class="number">5</span>,<span class="number">5</span>)-&gt;(<span class="number">5</span>,<span class="number">6</span>)</span><br><span class="line">(<span class="number">1</span>,<span class="number">1</span>)-&gt;(<span class="number">2</span>,<span class="number">1</span>)-&gt;(<span class="number">2</span>,<span class="number">2</span>)-&gt;(<span class="number">2</span>,<span class="number">3</span>)-&gt;(<span class="number">2</span>,<span class="number">4</span>)-&gt;(<span class="number">2</span>,<span class="number">5</span>)-&gt;(<span class="number">3</span>,<span class="number">5</span>)-&gt;(<span class="number">4</span>,<span class="number">5</span>)-&gt;(<span class="number">5</span>,<span class="number">5</span>)-&gt;(<span class="number">5</span>,<span class="number">6</span>)</span><br><span class="line">(<span class="number">1</span>,<span class="number">1</span>)-&gt;(<span class="number">2</span>,<span class="number">1</span>)-&gt;(<span class="number">2</span>,<span class="number">2</span>)-&gt;(<span class="number">2</span>,<span class="number">3</span>)-&gt;(<span class="number">2</span>,<span class="number">4</span>)-&gt;(<span class="number">3</span>,<span class="number">4</span>)-&gt;(<span class="number">3</span>,<span class="number">3</span>)-&gt;(<span class="number">4</span>,<span class="number">3</span>)-&gt;(<span class="number">4</span>,<span class="number">4</span>)-&gt;(<span class="number">4</span>,<span class="number">5</span>)-&gt;(<span class="number">5</span>,<span class="number">5</span>)-&gt;(<span class="number">5</span>,<span class="number">6</span>)</span><br><span class="line">(<span class="number">1</span>,<span class="number">1</span>)-&gt;(<span class="number">2</span>,<span class="number">1</span>)-&gt;(<span class="number">2</span>,<span class="number">2</span>)-&gt;(<span class="number">2</span>,<span class="number">3</span>)-&gt;(<span class="number">2</span>,<span class="number">4</span>)-&gt;(<span class="number">3</span>,<span class="number">4</span>)-&gt;(<span class="number">3</span>,<span class="number">5</span>)-&gt;(<span class="number">4</span>,<span class="number">5</span>)-&gt;(<span class="number">5</span>,<span class="number">5</span>)-&gt;(<span class="number">5</span>,<span class="number">6</span>)</span><br><span class="line">(<span class="number">1</span>,<span class="number">1</span>)-&gt;(<span class="number">2</span>,<span class="number">1</span>)-&gt;(<span class="number">2</span>,<span class="number">2</span>)-&gt;(<span class="number">2</span>,<span class="number">3</span>)-&gt;(<span class="number">2</span>,<span class="number">4</span>)-&gt;(<span class="number">3</span>,<span class="number">4</span>)-&gt;(<span class="number">4</span>,<span class="number">4</span>)-&gt;(<span class="number">4</span>,<span class="number">5</span>)-&gt;(<span class="number">5</span>,<span class="number">5</span>)-&gt;(<span class="number">5</span>,<span class="number">6</span>)</span><br><span class="line">(<span class="number">1</span>,<span class="number">1</span>)-&gt;(<span class="number">2</span>,<span class="number">1</span>)-&gt;(<span class="number">2</span>,<span class="number">2</span>)-&gt;(<span class="number">2</span>,<span class="number">3</span>)-&gt;(<span class="number">3</span>,<span class="number">3</span>)-&gt;(<span class="number">3</span>,<span class="number">4</span>)-&gt;(<span class="number">2</span>,<span class="number">4</span>)-&gt;(<span class="number">2</span>,<span class="number">5</span>)-&gt;(<span class="number">3</span>,<span class="number">5</span>)-&gt;(<span class="number">4</span>,<span class="number">5</span>)-&gt;(<span class="number">5</span>,<span class="number">5</span>)-&gt;(<span class="number">5</span>,<span class="number">6</span>)</span><br><span class="line">(<span class="number">1</span>,<span class="number">1</span>)-&gt;(<span class="number">2</span>,<span class="number">1</span>)-&gt;(<span class="number">2</span>,<span class="number">2</span>)-&gt;(<span class="number">2</span>,<span class="number">3</span>)-&gt;(<span class="number">3</span>,<span class="number">3</span>)-&gt;(<span class="number">3</span>,<span class="number">4</span>)-&gt;(<span class="number">3</span>,<span class="number">5</span>)-&gt;(<span class="number">4</span>,<span class="number">5</span>)-&gt;(<span class="number">5</span>,<span class="number">5</span>)-&gt;(<span class="number">5</span>,<span class="number">6</span>)</span><br><span class="line">(<span class="number">1</span>,<span class="number">1</span>)-&gt;(<span class="number">2</span>,<span class="number">1</span>)-&gt;(<span class="number">2</span>,<span class="number">2</span>)-&gt;(<span class="number">2</span>,<span class="number">3</span>)-&gt;(<span class="number">3</span>,<span class="number">3</span>)-&gt;(<span class="number">3</span>,<span class="number">4</span>)-&gt;(<span class="number">4</span>,<span class="number">4</span>)-&gt;(<span class="number">4</span>,<span class="number">5</span>)-&gt;(<span class="number">5</span>,<span class="number">5</span>)-&gt;(<span class="number">5</span>,<span class="number">6</span>)</span><br><span class="line">(<span class="number">1</span>,<span class="number">1</span>)-&gt;(<span class="number">2</span>,<span class="number">1</span>)-&gt;(<span class="number">2</span>,<span class="number">2</span>)-&gt;(<span class="number">2</span>,<span class="number">3</span>)-&gt;(<span class="number">3</span>,<span class="number">3</span>)-&gt;(<span class="number">4</span>,<span class="number">3</span>)-&gt;(<span class="number">4</span>,<span class="number">4</span>)-&gt;(<span class="number">3</span>,<span class="number">4</span>)-&gt;(<span class="number">2</span>,<span class="number">4</span>)-&gt;(<span class="number">2</span>,<span class="number">5</span>)-&gt;(<span class="number">3</span>,<span class="number">5</span>)-&gt;(<span class="number">4</span>,<span class="number">5</span>)-&gt;(<span class="number">5</span>,<span class="number">5</span>)-&gt;(<span class="number">5</span>,<span class="number">6</span>)</span><br><span class="line">(<span class="number">1</span>,<span class="number">1</span>)-&gt;(<span class="number">2</span>,<span class="number">1</span>)-&gt;(<span class="number">2</span>,<span class="number">2</span>)-&gt;(<span class="number">2</span>,<span class="number">3</span>)-&gt;(<span class="number">3</span>,<span class="number">3</span>)-&gt;(<span class="number">4</span>,<span class="number">3</span>)-&gt;(<span class="number">4</span>,<span class="number">4</span>)-&gt;(<span class="number">3</span>,<span class="number">4</span>)-&gt;(<span class="number">3</span>,<span class="number">5</span>)-&gt;(<span class="number">4</span>,<span class="number">5</span>)-&gt;(<span class="number">5</span>,<span class="number">5</span>)-&gt;(<span class="number">5</span>,<span class="number">6</span>)</span><br><span class="line">(<span class="number">1</span>,<span class="number">1</span>)-&gt;(<span class="number">2</span>,<span class="number">1</span>)-&gt;(<span class="number">2</span>,<span class="number">2</span>)-&gt;(<span class="number">2</span>,<span class="number">3</span>)-&gt;(<span class="number">3</span>,<span class="number">3</span>)-&gt;(<span class="number">4</span>,<span class="number">3</span>)-&gt;(<span class="number">4</span>,<span class="number">4</span>)-&gt;(<span class="number">4</span>,<span class="number">5</span>)-&gt;(<span class="number">5</span>,<span class="number">5</span>)-&gt;(<span class="number">5</span>,<span class="number">6</span>)</span><br></pre></td></tr></table></figure>
+<p>ps:怎麽樣，輸出看著是不是很<strong>惡心</strong>！！！</p>
+<h2 id="講解"><a href="#講解" class="headerlink" title="講解"></a>講解</h2><p>好吧 開始我神奇的講解</p>
+<p>這道題其實就是<code>DFS</code>暴力，跟另外一道題很像 <a href="https://www.luogu.org/problemnew/show/P1605" target="_blank" rel="noopener">Luogu p1605</a></p>
+<p>做法跟他差不多就好</p>
+<p>不同點差不多就是：</p>
+<blockquote>
+<p>順序，左上右下</p>
+<p>要輸出到達的點，而不是次數</p>
+</blockquote>
+<p>第一個狠簡單解決，就是這樣</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">search(deep+<span class="number">1</span>,x, y - <span class="number">1</span>);<span class="comment">//left</span></span><br><span class="line">		search(deep+<span class="number">1</span>,x - <span class="number">1</span>, y);<span class="comment">//up</span></span><br><span class="line">		search(deep+<span class="number">1</span>,x, y + <span class="number">1</span>);<span class="comment">//right</span></span><br><span class="line">		search(deep+<span class="number">1</span>,x + <span class="number">1</span>, y);<span class="comment">//down</span></span><br></pre></td></tr></table></figure>
+<p>調整順序就行了</p>
+<p>至於第二個問題，我一開始設了一個<code>set</code>數組，意在與：我到達一個可行的點，就在<code>set</code>數組裏標記一下，到最后，我到達中終點了，也就是</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(x==enx&amp;y==eny)&#123;</span><br><span class="line">	show();</span><br><span class="line">	<span class="keyword">return</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>調用<code>show()</code>函數，<code>show()</code>函數内我我要輸出<code>set</code>數組的值，但是我怎麽輸出呐？我的<code>set</code>數組是一個二維數組,也就是説，走的路徑不一定都是順著走的，也就是我的很多點記錄的值都不會被正確的輸出，於是，在每一條輸出中，我有些店的順序錯了。爲了解決，我設置了兩個一維數組，記錄到達的點的<code>（x，y）</code>坐標,這樣的話，就可以解決此問題了，當然，<code>deep</code>就是爲此而設置的！！！</p>
+<p>下面是代碼，應該很好理解</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;algorithm&gt;</span></span></span><br><span class="line"><span class="keyword">int</span> <span class="built_in">map</span>[<span class="number">1001</span>][<span class="number">1001</span>] = &#123; <span class="number">0</span> &#125;;</span><br><span class="line"><span class="keyword">int</span> <span class="built_in">set</span>[<span class="number">1001</span>][<span class="number">1001</span>] = &#123; <span class="number">0</span> &#125;;</span><br><span class="line"><span class="keyword">int</span> bingx[<span class="number">1001</span>] = &#123; <span class="number">0</span> &#125;, bingy[<span class="number">1001</span>] = &#123; <span class="number">0</span> &#125;;</span><br><span class="line"><span class="keyword">int</span> m, n,begx,begy,enx,eny;</span><br><span class="line"><span class="keyword">bool</span> binga;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">(<span class="keyword">int</span> p)</span> </span>&#123;</span><br><span class="line">	binga = <span class="number">1</span>;</span><br><span class="line">	<span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;p;i++)</span><br><span class="line">			<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt;<span class="string">"("</span>&lt;&lt; bingx[i] &lt;&lt; <span class="string">","</span> &lt;&lt; bingy[i] &lt;&lt; <span class="string">")-&gt;"</span>;</span><br><span class="line"></span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"("</span> &lt;&lt; enx &lt;&lt; <span class="string">","</span> &lt;&lt; eny &lt;&lt; <span class="string">")"</span>;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">get</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i, j;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; m &gt;&gt; n;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= m; i++)</span><br><span class="line">		<span class="keyword">for</span> (j = <span class="number">1</span>; j &lt;= n; j++)</span><br><span class="line">			<span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; <span class="built_in">map</span>[i][j];</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; begx &gt;&gt; begy &gt;&gt; enx &gt;&gt; eny;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">inline</span> <span class="keyword">void</span> <span class="title">search</span><span class="params">(<span class="keyword">int</span> deep,<span class="keyword">int</span> x, <span class="keyword">int</span> y)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">if</span> (x &lt; <span class="number">1</span> || y &lt; <span class="number">1</span> || x&gt;m || y&gt;n) &#123;</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;<span class="comment">//防止越界情況</span></span><br><span class="line">	<span class="keyword">if</span> (x == enx&amp;&amp;y == eny) &#123;</span><br><span class="line">		show(deep);</span><br><span class="line">		<span class="keyword">return</span>;</span><br><span class="line">	&#125;<span class="comment">//如果完成了一次愉快的到達，那麽就需要調用show()函數來輸出路徑</span></span><br><span class="line">	<span class="keyword">if</span> (<span class="built_in">map</span>[x][y] == <span class="number">1</span>) &#123;</span><br><span class="line">		bingx[deep] = x; bingy[deep] = y;</span><br><span class="line">		<span class="built_in">map</span>[x][y] = <span class="number">0</span>;<span class="comment">//防止走重</span></span><br><span class="line">		search(deep+<span class="number">1</span>,x, y - <span class="number">1</span>);<span class="comment">//left</span></span><br><span class="line">		search(deep+<span class="number">1</span>,x - <span class="number">1</span>, y);<span class="comment">//up</span></span><br><span class="line">		search(deep+<span class="number">1</span>,x, y + <span class="number">1</span>);<span class="comment">//right</span></span><br><span class="line">		search(deep+<span class="number">1</span>,x + <span class="number">1</span>, y);<span class="comment">//down</span></span><br><span class="line">		<span class="built_in">map</span>[x][y] = <span class="number">1</span>;<span class="comment">//回溯的過程</span></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	get();</span><br><span class="line">	<span class="keyword">if</span> (<span class="built_in">map</span>[enx][eny] == <span class="number">0</span>) &#123;</span><br><span class="line">		<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"-1"</span>;</span><br><span class="line">		<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	search(<span class="number">0</span>, begx, begy);</span><br><span class="line">	<span class="keyword">if</span> (binga == <span class="number">0</span>)<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"-1"</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><strong> 注意：設置終點無法走的特判。</strong></p>
+<p>OK,就這樣吧</p>
+<p>如果還有問題</p>
+<p>Contact me At This <a href="http://jczhang.top/contact/" target="_blank" rel="noopener">Way</a>.</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2017/12/18/luogu-p1238/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2017/12/18/luogu-p1238/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2017总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>

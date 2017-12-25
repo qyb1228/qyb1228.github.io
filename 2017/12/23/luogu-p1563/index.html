@@ -1,0 +1,263 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo_miccall.png"/>
+	 <link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			
+    <title>
+    JC Zhang
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+</head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">JC-Zhang</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">Home</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">categories</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Algorithm/">Algorithm</a></li><li><a class="category-link" href="/categories/C/">C++</a></li><li><a class="category-link" href="/categories/Essay/">Essay</a></li><li><a class="category-link" href="/categories/Problem/">Problem</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">archives</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/9999/12/">December 9999</a></li><li><a class="archive-link" href="/archives/2017/12/">December 2017</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="About">
+		                About
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="Link">
+		                Link
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="Gallery">
+		                Gallery
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tags/" title="Tags">
+		                Tags
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		                <li><a href="https://github.com/qyb1228.github.io" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		            
+		            
+		            
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://img.tuku.cn/file_big/201503/8356fc35eac249aea28ecec6fbded33d.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >luogu p1563</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="玩具谜题"><a href="#玩具谜题" class="headerlink" title="玩具谜题"></a>玩具谜题</h1><hr>
+<p>很有意思的题，同时也是NOIp2016年的考题，D1T1，纯模拟，不过需要推一下状态转移</p>
+<a id="more"></a>
+<h2 id="题目"><a href="#题目" class="headerlink" title="题目"></a>题目</h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>小南有一套可爱的玩具小人, 它们各有不同的职业。</p>
+<p>有一天, 这些玩具小人把小南的眼镜藏了起来。 小南发现玩具小人们围成了一个圈,它们有的面朝圈内,有的面朝圈外。如下图:</p>
+<p><img src="http://img.uoj.ac/problem/260/toy.png" alt="玩具谜题例图"></p>
+<p>这时singer告诉小南一个谜題: “眼镜藏在我左数第3个玩具小人的右数第1个玩具小人的左数第2个玩具小人那里。 ”</p>
+<p>小南发现, 这个谜题中玩具小人的朝向非常关键, 因为朝内和朝外的玩具小人的左右方向是相反的: 面朝圈内的玩具小人, 它的左边是顺时针方向, 右边是逆时针方向; 而面向圈外的玩具小人, 它的左边是逆时针方向, 右边是顺时针方向。</p>
+<p>小南一边艰难地辨认着玩具小人, 一边数着:</p>
+<p>singer朝内, 左数第3个是archer。</p>
+<p>archer朝外,右数第1个是thinker。</p>
+<p>thinker朝外, 左数第2个是writer。</p>
+<p>所以眼镜藏在writer这里!</p>
+<p>虽然成功找回了眼镜, 但小南并没有放心。 如果下次有更多的玩具小人藏他的眼镜, 或是谜題的长度更长, 他可能就无法找到眼镜了 。 所以小南希望你写程序帮他解决类似的谜題。 这样的谜題具体可以描述为:</p>
+<p>有 n个玩具小人围成一圈, 已知它们的职业和朝向。现在第1个玩具小人告诉小南一个包含 m条指令的谜題, 其中第 z条指令形如“左数/右数第 s,个玩具小人”。 你需要输出依次数完这些指令后,到达的玩具小人的职业。</p>
+<h3 id="输入输出格式"><a href="#输入输出格式" class="headerlink" title="输入输出格式"></a>输入输出格式</h3><h4 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h4><p>输入的第一行包含两个正整数 n,m, 表示玩具小人的个数和指令的条数。</p>
+<p>接下来 n行, 每行包含一个整数和一个字符串, 以逆时针为顺序给出每个玩具小人的朝向和职业。其中0表示朝向圈内, 1表示朝向圈外。保证不会出现其他的数。字符串长度不超过10且仅由小写字母构成, 字符串不为空, 并且字符串两两不同。 整数和字符串之问用一个空格隔开。</p>
+<p>接下来 m行,其中第 z行包含两个整数 a,,s,,表示第 z条指令。若 a,= 0,表示向左数 s,个人;若a,= 1 ,表示向右数 s,个人。保证a,不会出现其他的数, 1≤ s,&lt;n 。</p>
+<h4 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h4><p>输出一个字符串, 表示从第一个读入的小人开始, 依次数完 m条指令后到达的小人的职业。</p>
+<h3 id="输入输出样例"><a href="#输入输出样例" class="headerlink" title="输入输出样例"></a>输入输出样例</h3><h4 id="输入样例-1："><a href="#输入样例-1：" class="headerlink" title="输入样例#1："></a>输入样例#1：</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">7</span> <span class="number">3</span></span><br><span class="line"><span class="number">0</span> singer</span><br><span class="line"><span class="number">0</span> reader</span><br><span class="line"><span class="number">0</span> mengbier </span><br><span class="line"><span class="number">1</span> thinker</span><br><span class="line"><span class="number">1</span> archer</span><br><span class="line"><span class="number">0</span> writer</span><br><span class="line"><span class="number">1</span> mogician </span><br><span class="line"><span class="number">0</span> <span class="number">3</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="number">0</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
+<h4 id="输出样例-1："><a href="#输出样例-1：" class="headerlink" title="输出样例#1："></a>输出样例#1：</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">writer</span><br></pre></td></tr></table></figure>
+<h4 id="输入样例-2："><a href="#输入样例-2：" class="headerlink" title="输入样例#2："></a>输入样例#2：</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">10</span> <span class="number">10</span></span><br><span class="line"><span class="number">1</span> C</span><br><span class="line"><span class="number">0</span> r</span><br><span class="line"><span class="number">0</span> P</span><br><span class="line"><span class="number">1</span> d</span><br><span class="line"><span class="number">1</span> e</span><br><span class="line"><span class="number">1</span> m</span><br><span class="line"><span class="number">1</span> t</span><br><span class="line"><span class="number">1</span> y</span><br><span class="line"><span class="number">1</span> u</span><br><span class="line"><span class="number">0</span> V</span><br><span class="line"><span class="number">1</span> <span class="number">7</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="number">1</span> <span class="number">4</span></span><br><span class="line"><span class="number">0</span> <span class="number">5</span></span><br><span class="line"><span class="number">0</span> <span class="number">3</span></span><br><span class="line"><span class="number">0</span> <span class="number">1</span></span><br><span class="line"><span class="number">1</span> <span class="number">6</span></span><br><span class="line"><span class="number">1</span> <span class="number">2</span></span><br><span class="line"><span class="number">0</span> <span class="number">8</span></span><br><span class="line"><span class="number">0</span> <span class="number">4</span></span><br></pre></td></tr></table></figure>
+<h4 id="输出样例-2："><a href="#输出样例-2：" class="headerlink" title="输出样例#2："></a>输出样例#2：</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">y</span><br></pre></td></tr></table></figure>
+<h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>【样例1说明】<br>这组数据就是【题目描述】 中提到的例子。<br>【子任务】<br>子任务会给出部分测试数据的特点。 如果你在解决题目中遇到了困难, 可以尝试只解决一部分测试数据。<br>每个测试点的数据规模及特点如下表:</p>
+<p>其中一些简写的列意义如下:<br>• 全朝内: 若为“√”, 表示该测试点保证所有的玩具小人都朝向圈内;<br>全左数:若为“√”,表示该测试点保证所有的指令都向左数,即对任意的<br>1≤z≤m, ai=0;<br>s,= 1:若为“√”,表示该测试点保证所有的指令都只数1个,即对任意的<br>1≤z≤m, si=1;<br>职业长度为1 :若为“√”,表示该测试点保证所有玩具小人的职业一定是一个<br>长度为1的字符串。</p>
+<h2 id="讲解"><a href="#讲解" class="headerlink" title="讲解"></a>讲解</h2><p>纯模拟，加很简单的状态转移</p>
+<p>状态转移我是这么写的</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (Direction == <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span> (info[pos].face == <span class="number">0</span>)</span><br><span class="line">				pos = (pos - length + n) % n;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				pos = (pos + length + n) % n;</span><br><span class="line">			<span class="keyword">if</span> (pos == <span class="number">0</span>)</span><br><span class="line">				pos = n;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (Direction == <span class="number">1</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span> (info[pos].face == <span class="number">0</span>)</span><br><span class="line">				pos = (pos + length + n) % n;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				pos = (pos - length + n) % n;</span><br><span class="line">			<span class="keyword">if</span> (pos == <span class="number">0</span>)</span><br><span class="line">				pos = n;</span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure>
+<p>然后，这里是代码</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">qyb</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">int</span> face;</span><br><span class="line">	<span class="keyword">char</span> name[<span class="number">11</span>];</span><br><span class="line">&#125;info[<span class="number">100001</span>];</span><br><span class="line"><span class="keyword">int</span> Direction, pos = <span class="number">1</span>, length, n, m;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		<span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; info[i].face;</span><br><span class="line">		<span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; info[i].name;</span><br><span class="line">	&#125;<span class="comment">//到现在为止，完成了对小人的信息读入；</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= m; i++) &#123;</span><br><span class="line">		<span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; Direction;</span><br><span class="line">		<span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; length;</span><br><span class="line">		<span class="keyword">if</span> (Direction == <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span> (info[pos].face == <span class="number">0</span>)</span><br><span class="line">				pos = (pos - length + n) % n;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				pos = (pos + length + n) % n;</span><br><span class="line">			<span class="keyword">if</span> (pos == <span class="number">0</span>)</span><br><span class="line">				pos = n;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (Direction == <span class="number">1</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span> (info[pos].face == <span class="number">0</span>)</span><br><span class="line">				pos = (pos + length + n) % n;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				pos = (pos - length + n) % n;</span><br><span class="line">			<span class="keyword">if</span> (pos == <span class="number">0</span>)</span><br><span class="line">				pos = n;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; info[pos].name &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span>  <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>用了一个结构体，操作</p>
+<p>有问题的可以通过</p>
+<p><strong><a href="https://qyb1228.github.io/contact" target="_blank" rel="noopener">This Way</a></strong></p>
+<p>联系我</p>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2017/12/23/luogu-p1563/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2017/12/23/luogu-p1563/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2017总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
