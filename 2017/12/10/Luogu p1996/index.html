@@ -27,7 +27,7 @@
     <script src="/js/util.js"></script>
     <script src="/js/main.js"></script>
 	
-</head>
+<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
     
 		
 <!-- Layouts -->
@@ -35,7 +35,7 @@
 
 
 <!--  代码渲染  -->
-<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/prism_default.css" />
 <link rel="stylesheet" href="/css/typo.css" />
 <!-- 文章页 -->
 <body class="is-loading">
@@ -131,15 +131,47 @@
 <p><strong>输出格式：</strong></p>
 <p>出圈的编号</p>
 <h3 id="输入输出样例"><a href="#输入输出样例" class="headerlink" title="输入输出样例"></a>输入输出样例</h3><p><strong>输入样例#1：</strong></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">10</span> <span class="number">3</span></span><br></pre></td></tr></table></figure>
+<pre class=" language-cpp"><code class="language-cpp"><span class="token number">10</span> <span class="token number">3</span>
+</code></pre>
 <p><strong>输出样例#1：</strong></p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">3</span> <span class="number">6</span> <span class="number">9</span> <span class="number">2</span> <span class="number">7</span> <span class="number">1</span> <span class="number">8</span> <span class="number">5</span> <span class="number">10</span> <span class="number">4</span></span><br></pre></td></tr></table></figure>
-<h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">m,n≤<span class="number">100</span>m, n \le <span class="number">100</span>m,n≤<span class="number">100</span></span><br></pre></td></tr></table></figure>
+<pre class=" language-cpp"><code class="language-cpp"><span class="token number">3</span> <span class="token number">6</span> <span class="token number">9</span> <span class="token number">2</span> <span class="token number">7</span> <span class="token number">1</span> <span class="token number">8</span> <span class="token number">5</span> <span class="token number">10</span> <span class="token number">4</span>
+</code></pre>
+<h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><pre class=" language-cpp"><code class="language-cpp">m<span class="token punctuation">,</span>n≤100m<span class="token punctuation">,</span> n \le 100m<span class="token punctuation">,</span>n≤<span class="token number">100</span>
+</code></pre>
 <p>總而言之，作爲一道 <strong>level1</strong> 的水題，他表現了他的價值。</p>
 <p>思路就不説了，代碼注釋裏都有的</p>
 <p>那就放代碼啦：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">namespace</span> bing &#123;</span><br><span class="line">	<span class="keyword">int</span> qyb=<span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">cin</span>;</span><br><span class="line">	<span class="keyword">using</span> <span class="built_in">std</span>::<span class="built_in">cout</span>;</span><br><span class="line">	<span class="keyword">int</span> n, m;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m;<span class="comment">//取值</span></span><br><span class="line">	<span class="keyword">bool</span>  Qyb[<span class="number">1001</span>] = &#123; <span class="number">0</span> &#125;;<span class="comment">//建立一個bool數組，並初始化為false</span></span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> k = <span class="number">0</span>; k&lt;n; k++) &#123;<span class="comment">//有n個數，要彈出n次</span></span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i&lt;m; i++) </span><br><span class="line">		&#123; </span><br><span class="line">			<span class="keyword">if</span> (++bing::qyb&gt;n)</span><br><span class="line">				bing::qyb = <span class="number">1</span>;<span class="comment">//彈出這個數</span></span><br><span class="line">			<span class="keyword">if</span> (Qyb[bing::qyb])<span class="comment">//如果這個數被彈出了</span></span><br><span class="line">				i--;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="built_in">cout</span> &lt;&lt;bing::qyb &lt;&lt; <span class="string">" "</span>;</span><br><span class="line">		<span class="comment">//這個地方有兩個選擇：一 循環了m次都沒有找到bing::qyb標注為1的，那麽就直接輸出就是樣例中的3 6 9</span></span><br><span class="line">		                                  <span class="comment">//二 有找到bing::qyb&gt;n的數，那麽</span></span><br><span class="line">		Qyb[bing::qyb] = <span class="literal">true</span>; <span class="comment">//都輸出了，那肯定是已經把這個數去除了</span></span><br><span class="line">	&#125;<span class="comment">//其實 最初都沒有找到大於n的數，但正是如此，所以 以 n 為 步數的跳。</span></span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="PS-你可以明顯的發現一個我的騷騷的操作"><a href="#PS-你可以明顯的發現一個我的騷騷的操作" class="headerlink" title="PS: 你可以明顯的發現一個我的騷騷的操作"></a>PS: 你可以明顯的發現一個我的騷騷的操作</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">namespace</span> bing&#123;</span><br><span class="line">	<span class="keyword">int</span> qyb=<span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
+<span class="token keyword">namespace</span> bing <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> qyb<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">using</span> std<span class="token operator">::</span>cin<span class="token punctuation">;</span>
+    <span class="token keyword">using</span> std<span class="token operator">::</span>cout<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> n<span class="token punctuation">,</span> m<span class="token punctuation">;</span>
+    cin <span class="token operator">>></span> n <span class="token operator">>></span> m<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//取值</span>
+    <span class="token keyword">bool</span>  Qyb<span class="token punctuation">[</span><span class="token number">1001</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token punctuation">{</span> <span class="token number">0</span> <span class="token punctuation">}</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//建立一個bool數組，並初始化為false</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> k <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> k<span class="token operator">&lt;</span>n<span class="token punctuation">;</span> k<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token comment" spellcheck="true">//有n個數，要彈出n次</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">0</span><span class="token punctuation">;</span> i<span class="token operator">&lt;</span>m<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> 
+        <span class="token punctuation">{</span> 
+            <span class="token keyword">if</span> <span class="token punctuation">(</span><span class="token operator">++</span>bing<span class="token operator">::</span>qyb<span class="token operator">></span>n<span class="token punctuation">)</span>
+                bing<span class="token operator">::</span>qyb <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//彈出這個數</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>Qyb<span class="token punctuation">[</span>bing<span class="token operator">::</span>qyb<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//如果這個數被彈出了</span>
+                i<span class="token operator">--</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        cout <span class="token operator">&lt;&lt;</span>bing<span class="token operator">::</span>qyb <span class="token operator">&lt;&lt;</span> <span class="token string">" "</span><span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//這個地方有兩個選擇：一 循環了m次都沒有找到bing::qyb標注為1的，那麽就直接輸出就是樣例中的3 6 9</span>
+                                          <span class="token comment" spellcheck="true">//二 有找到bing::qyb>n的數，那麽</span>
+        Qyb<span class="token punctuation">[</span>bing<span class="token operator">::</span>qyb<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token boolean">true</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//都輸出了，那肯定是已經把這個數去除了</span>
+    <span class="token punctuation">}</span><span class="token comment" spellcheck="true">//其實 最初都沒有找到大於n的數，但正是如此，所以 以 n 為 步數的跳。</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<h3 id="PS-你可以明顯的發現一個我的騷騷的操作"><a href="#PS-你可以明顯的發現一個我的騷騷的操作" class="headerlink" title="PS: 你可以明顯的發現一個我的騷騷的操作"></a>PS: 你可以明顯的發現一個我的騷騷的操作</h3><pre class=" language-cpp"><code class="language-cpp"><span class="token keyword">namespace</span> bing<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> qyb<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
 <p>這是名稱聲明，我聲明了一個名爲 <code>bing</code> 的的空間，其中包含一個<code>int</code>類型的變量<code>qyb</code></p>
 <p>不過要是想用它，就需要這樣</p>
 <blockquote>

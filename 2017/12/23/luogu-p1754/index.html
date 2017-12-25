@@ -27,7 +27,7 @@
     <script src="/js/util.js"></script>
     <script src="/js/main.js"></script>
 	
-</head>
+<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
     
 		
 <!-- Layouts -->
@@ -35,7 +35,7 @@
 
 
 <!--  代码渲染  -->
-<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/prism_default.css" />
 <link rel="stylesheet" href="/css/typo.css" />
 <!-- 文章页 -->
 <body class="is-loading">
@@ -132,8 +132,10 @@
 <p>对于给定的n (0≤n≤20),计算2N个球迷有多少种排队方式，可以使售票处不至于找不出钱。</p>
 <h3 id="输入输出格式"><a href="#输入输出格式" class="headerlink" title="输入输出格式"></a>输入输出格式</h3><h4 id="输入格式"><a href="#输入格式" class="headerlink" title="输入格式:"></a>输入格式:</h4><p>一个整数，代表N的值</p>
 <h4 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h4><p>一个整数，表示方案数</p>
-<h3 id="输入输出样例"><a href="#输入输出样例" class="headerlink" title="输入输出样例"></a>输入输出样例</h3><h4 id="输入样例-1"><a href="#输入样例-1" class="headerlink" title="输入样例#1"></a>输入样例#1</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
-<h4 id="输出样例-1"><a href="#输出样例-1" class="headerlink" title="输出样例#1"></a>输出样例#1</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2</span></span><br></pre></td></tr></table></figure>
+<h3 id="输入输出样例"><a href="#输入输出样例" class="headerlink" title="输入输出样例"></a>输入输出样例</h3><h4 id="输入样例-1"><a href="#输入样例-1" class="headerlink" title="输入样例#1"></a>输入样例#1</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token number">2</span>
+</code></pre>
+<h4 id="输出样例-1"><a href="#输出样例-1" class="headerlink" title="输出样例#1"></a>输出样例#1</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token number">2</span>
+</code></pre>
 <h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>必开<strong>QWORD</strong></p>
 <p>测试：N=15</p>
 <p>回溯:1秒（超时）</p>
@@ -143,7 +145,8 @@
 <p>组合算法：16 MS</p>
 <h2 id="讲解"><a href="#讲解" class="headerlink" title="讲解"></a>讲解</h2><p>###卡特兰数    </p>
 <p>卡特兰数又称卡塔兰数，英文名Catalan number，是<a href="https://baike.baidu.com/item/%E7%BB%84%E5%90%88%E6%95%B0%E5%AD%A6" target="_blank" rel="noopener">组合数学</a>中一个常出现在各种计数问题中出现的<a href="https://baike.baidu.com/item/%E6%95%B0%E5%88%97" target="_blank" rel="noopener">数列</a>。以<a href="https://baike.baidu.com/item/%E6%AF%94%E5%88%A9%E6%97%B6" target="_blank" rel="noopener">比利时</a>的数学家欧仁·查理·卡塔兰 (1814–1894)的名字来命名，其前几项为 : </p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>, <span class="number">1</span>, <span class="number">2</span>, <span class="number">5</span>, <span class="number">14</span>, <span class="number">42</span>, <span class="number">132</span>, <span class="number">429</span>, <span class="number">1430</span>, <span class="number">4862</span>, <span class="number">16796</span>, <span class="number">58786</span>, <span class="number">208012</span>, <span class="number">742900</span>, <span class="number">2674440</span>, <span class="number">9694845</span>, <span class="number">35357670</span>, <span class="number">129644790</span>, <span class="number">477638700</span>, <span class="number">1767263190</span>, <span class="number">6564120420</span>, <span class="number">24466267020</span>, <span class="number">91482563640</span>, <span class="number">343059613650</span>, <span class="number">1289904147324</span>, <span class="number">4861946401452</span></span><br></pre></td></tr></table></figure>
+<pre class=" language-cpp"><code class="language-cpp"><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">,</span> <span class="token number">14</span><span class="token punctuation">,</span> <span class="token number">42</span><span class="token punctuation">,</span> <span class="token number">132</span><span class="token punctuation">,</span> <span class="token number">429</span><span class="token punctuation">,</span> <span class="token number">1430</span><span class="token punctuation">,</span> <span class="token number">4862</span><span class="token punctuation">,</span> <span class="token number">16796</span><span class="token punctuation">,</span> <span class="token number">58786</span><span class="token punctuation">,</span> <span class="token number">208012</span><span class="token punctuation">,</span> <span class="token number">742900</span><span class="token punctuation">,</span> <span class="token number">2674440</span><span class="token punctuation">,</span> <span class="token number">9694845</span><span class="token punctuation">,</span> <span class="token number">35357670</span><span class="token punctuation">,</span> <span class="token number">129644790</span><span class="token punctuation">,</span> <span class="token number">477638700</span><span class="token punctuation">,</span> <span class="token number">1767263190</span><span class="token punctuation">,</span> <span class="token number">6564120420</span><span class="token punctuation">,</span> <span class="token number">24466267020</span><span class="token punctuation">,</span> <span class="token number">91482563640</span><span class="token punctuation">,</span> <span class="token number">343059613650</span><span class="token punctuation">,</span> <span class="token number">1289904147324</span><span class="token punctuation">,</span> <span class="token number">4861946401452</span>
+</code></pre>
 <p>当然，这没有什么用</p>
 <p><strong>重要的是</strong></p>
 <p>它满足递归式</p>
@@ -159,8 +162,21 @@
 </blockquote>
 <p>其實還有別的，懶得打了</p>
 <p>代碼</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="keyword">unsigned</span> <span class="keyword">long</span> <span class="keyword">long</span> h[<span class="number">10001</span>];</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	h[<span class="number">1</span>] = <span class="number">1</span>; h[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">	<span class="built_in">cin</span> &gt;&gt; n;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">2</span>; i &lt;= n; i++)</span><br><span class="line">		h[i] = h[i - <span class="number">1</span>] * (<span class="number">4</span> * i - <span class="number">2</span>) / (i + <span class="number">1</span>);</span><br><span class="line">	<span class="built_in">cout</span> &lt;&lt; h[n]&lt;&lt;<span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">endif</span></span></span><br></pre></td></tr></table></figure>
+<pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<span class="token keyword">unsigned</span> <span class="token keyword">long</span> <span class="token keyword">long</span> h<span class="token punctuation">[</span><span class="token number">10001</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> n<span class="token punctuation">;</span>
+    h<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> h<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>
+    cin <span class="token operator">>></span> n<span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span><span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">2</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span>
+        h<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">=</span> h<span class="token punctuation">[</span>i <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">]</span> <span class="token operator">*</span> <span class="token punctuation">(</span><span class="token number">4</span> <span class="token operator">*</span> i <span class="token operator">-</span> <span class="token number">2</span><span class="token punctuation">)</span> <span class="token operator">/</span> <span class="token punctuation">(</span>i <span class="token operator">+</span> <span class="token number">1</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    cout <span class="token operator">&lt;&lt;</span> h<span class="token punctuation">[</span>n<span class="token punctuation">]</span><span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">endif</span></span>
+</code></pre>
 
             </div>
 

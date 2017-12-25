@@ -27,7 +27,7 @@
     <script src="/js/util.js"></script>
     <script src="/js/main.js"></script>
 	
-</head>
+<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
     
 		
 <!-- Layouts -->
@@ -35,7 +35,7 @@
 
 
 <!--  代码渲染  -->
-<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/prism_default.css" />
 <link rel="stylesheet" href="/css/typo.css" />
 <!-- 文章页 -->
 <body class="is-loading">
@@ -126,10 +126,14 @@
 <h2 id="題目"><a href="#題目" class="headerlink" title="題目"></a>題目</h2><h3 id="题目描述"><a href="#题目描述" class="headerlink" title="题目描述"></a>题目描述</h3><p>假设一个表达式有英文字母（小写）、运算符（+，—，*，/）和左右小（圆）括号构成，以“@”作为表达式的结束符。请编写一个程序检查表达式中的左右圆括号是否匹配，若匹配，则返回“YES”；否则返回“NO”。表达式长度小于255，左圆括号少于20个。</p>
 <h3 id="输入输出格式"><a href="#输入输出格式" class="headerlink" title="输入输出格式"></a>输入输出格式</h3><h4 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h4><p>一行：表达式</p>
 <h4 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h4><p>一行：“YES” 或“NO”</p>
-<h3 id="输入输出样例"><a href="#输入输出样例" class="headerlink" title="输入输出样例"></a>输入输出样例</h3><h4 id="输入样例-1："><a href="#输入样例-1：" class="headerlink" title="输入样例#1："></a>输入样例#1：</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">2</span>*(x+y)/(<span class="number">1</span>-x)@</span><br></pre></td></tr></table></figure>
-<h4 id="输出样例-1："><a href="#输出样例-1：" class="headerlink" title="输出样例#1："></a>输出样例#1：</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">YES</span><br></pre></td></tr></table></figure>
-<h4 id="输入样例-2："><a href="#输入样例-2：" class="headerlink" title="输入样例#2："></a>输入样例#2：</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="number">25</span>+x)*(a*(a+b+b)@</span><br></pre></td></tr></table></figure>
-<h4 id="输出样例-2："><a href="#输出样例-2：" class="headerlink" title="输出样例#2："></a>输出样例#2：</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">NO</span><br></pre></td></tr></table></figure>
+<h3 id="输入输出样例"><a href="#输入输出样例" class="headerlink" title="输入输出样例"></a>输入输出样例</h3><h4 id="输入样例-1："><a href="#输入样例-1：" class="headerlink" title="输入样例#1："></a>输入样例#1：</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token number">2</span><span class="token operator">*</span><span class="token punctuation">(</span>x<span class="token operator">+</span>y<span class="token punctuation">)</span><span class="token operator">/</span><span class="token punctuation">(</span><span class="token number">1</span><span class="token operator">-</span>x<span class="token punctuation">)</span>@
+</code></pre>
+<h4 id="输出样例-1："><a href="#输出样例-1：" class="headerlink" title="输出样例#1："></a>输出样例#1：</h4><pre class=" language-cpp"><code class="language-cpp">YES
+</code></pre>
+<h4 id="输入样例-2："><a href="#输入样例-2：" class="headerlink" title="输入样例#2："></a>输入样例#2：</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token punctuation">(</span><span class="token number">25</span><span class="token operator">+</span>x<span class="token punctuation">)</span><span class="token operator">*</span><span class="token punctuation">(</span>a<span class="token operator">*</span><span class="token punctuation">(</span>a<span class="token operator">+</span>b<span class="token operator">+</span>b<span class="token punctuation">)</span>@
+</code></pre>
+<h4 id="输出样例-2："><a href="#输出样例-2：" class="headerlink" title="输出样例#2："></a>输出样例#2：</h4><pre class=" language-cpp"><code class="language-cpp">NO
+</code></pre>
 <h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>表达式长度小于255，左圆括号少于20个</p>
 <h2 id="講述"><a href="#講述" class="headerlink" title="講述"></a>講述</h2><p>你可以把這道題想成一個棧，輸入一個<code>(</code>，就<code>push</code>入棧,輸入一個<code>)</code>,就出棧。</p>
 <p>挺難理解的我感覺。</p>
@@ -138,7 +142,28 @@
 <p>到最后，判断栈是否为空</p>
 <p>当然，要设一个特判，就是是不是在表达式中就有这种<code>)</code>多于<code>(</code>的情况</p>
 <p>具体如下代码：</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">namespace</span> bing &#123;</span><br><span class="line">	<span class="keyword">int</span> n;</span><br><span class="line">	<span class="keyword">int</span> qyb;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">namespace</span> QYB &#123;</span><br><span class="line">	<span class="keyword">char</span> qyb;</span><br><span class="line">&#125;<span class="comment">//两个名稱聲明，因爲我太喜歡qyb了，qwq qwq</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">while</span> (QYB::qyb!=<span class="string">'@'</span>)</span><br><span class="line">	&#123;</span><br><span class="line">		<span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; QYB::qyb;</span><br><span class="line">		<span class="comment">//取值</span></span><br><span class="line">		<span class="keyword">if</span> (QYB::qyb == <span class="string">'('</span>) bing::qyb++;<span class="comment">//入棧</span></span><br><span class="line">		<span class="keyword">if</span> (QYB::qyb == <span class="string">')'</span>&amp;&amp;bing::qyb&gt;<span class="number">0</span>) bing::qyb--;<span class="comment">//出棧</span></span><br><span class="line">		  <span class="keyword">else</span> </span><br><span class="line">			  <span class="keyword">if</span> (QYB::qyb == <span class="string">')'</span>) bing::n = <span class="number">1</span>;<span class="comment">//判斷是不是有左括號小於右括號的情況</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">if</span> (bing::n ||bing::qyb != <span class="number">0</span>) <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"NO"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;<span class="comment">//輸出</span></span><br><span class="line">	<span class="keyword">else</span> <span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; <span class="string">"YES"</span> &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
+<span class="token keyword">namespace</span> bing <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> n<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> qyb<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span class="token keyword">namespace</span> QYB <span class="token punctuation">{</span>
+    <span class="token keyword">char</span> qyb<span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token comment" spellcheck="true">//两个名稱聲明，因爲我太喜歡qyb了，qwq qwq</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">while</span> <span class="token punctuation">(</span>QYB<span class="token operator">::</span>qyb<span class="token operator">!=</span><span class="token string">'@'</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        std<span class="token operator">::</span>cin <span class="token operator">>></span> QYB<span class="token operator">::</span>qyb<span class="token punctuation">;</span>
+        <span class="token comment" spellcheck="true">//取值</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>QYB<span class="token operator">::</span>qyb <span class="token operator">==</span> <span class="token string">'('</span><span class="token punctuation">)</span> bing<span class="token operator">::</span>qyb<span class="token operator">++</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//入棧</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>QYB<span class="token operator">::</span>qyb <span class="token operator">==</span> <span class="token string">')'</span><span class="token operator">&amp;&amp;</span>bing<span class="token operator">::</span>qyb<span class="token operator">></span><span class="token number">0</span><span class="token punctuation">)</span> bing<span class="token operator">::</span>qyb<span class="token operator">--</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//出棧</span>
+          <span class="token keyword">else</span> 
+              <span class="token keyword">if</span> <span class="token punctuation">(</span>QYB<span class="token operator">::</span>qyb <span class="token operator">==</span> <span class="token string">')'</span><span class="token punctuation">)</span> bing<span class="token operator">::</span>n <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//判斷是不是有左括號小於右括號的情況</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">if</span> <span class="token punctuation">(</span>bing<span class="token operator">::</span>n <span class="token operator">||</span>bing<span class="token operator">::</span>qyb <span class="token operator">!=</span> <span class="token number">0</span><span class="token punctuation">)</span> std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">"NO"</span> <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//輸出</span>
+    <span class="token keyword">else</span> std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> <span class="token string">"YES"</span> <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
 <p>很水的題，看看就明白了</p>
 
             </div>

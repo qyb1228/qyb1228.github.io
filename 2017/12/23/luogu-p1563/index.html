@@ -27,7 +27,7 @@
     <script src="/js/util.js"></script>
     <script src="/js/main.js"></script>
 	
-</head>
+<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
     
 		
 <!-- Layouts -->
@@ -35,7 +35,7 @@
 
 
 <!--  代码渲染  -->
-<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/prism_default.css" />
 <link rel="stylesheet" href="/css/typo.css" />
 <!-- 文章页 -->
 <body class="is-loading">
@@ -140,17 +140,105 @@
 <p>接下来 n行, 每行包含一个整数和一个字符串, 以逆时针为顺序给出每个玩具小人的朝向和职业。其中0表示朝向圈内, 1表示朝向圈外。保证不会出现其他的数。字符串长度不超过10且仅由小写字母构成, 字符串不为空, 并且字符串两两不同。 整数和字符串之问用一个空格隔开。</p>
 <p>接下来 m行,其中第 z行包含两个整数 a,,s,,表示第 z条指令。若 a,= 0,表示向左数 s,个人;若a,= 1 ,表示向右数 s,个人。保证a,不会出现其他的数, 1≤ s,&lt;n 。</p>
 <h4 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h4><p>输出一个字符串, 表示从第一个读入的小人开始, 依次数完 m条指令后到达的小人的职业。</p>
-<h3 id="输入输出样例"><a href="#输入输出样例" class="headerlink" title="输入输出样例"></a>输入输出样例</h3><h4 id="输入样例-1："><a href="#输入样例-1：" class="headerlink" title="输入样例#1："></a>输入样例#1：</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">7</span> <span class="number">3</span></span><br><span class="line"><span class="number">0</span> singer</span><br><span class="line"><span class="number">0</span> reader</span><br><span class="line"><span class="number">0</span> mengbier </span><br><span class="line"><span class="number">1</span> thinker</span><br><span class="line"><span class="number">1</span> archer</span><br><span class="line"><span class="number">0</span> writer</span><br><span class="line"><span class="number">1</span> mogician </span><br><span class="line"><span class="number">0</span> <span class="number">3</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="number">0</span> <span class="number">2</span></span><br></pre></td></tr></table></figure>
-<h4 id="输出样例-1："><a href="#输出样例-1：" class="headerlink" title="输出样例#1："></a>输出样例#1：</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">writer</span><br></pre></td></tr></table></figure>
-<h4 id="输入样例-2："><a href="#输入样例-2：" class="headerlink" title="输入样例#2："></a>输入样例#2：</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">10</span> <span class="number">10</span></span><br><span class="line"><span class="number">1</span> C</span><br><span class="line"><span class="number">0</span> r</span><br><span class="line"><span class="number">0</span> P</span><br><span class="line"><span class="number">1</span> d</span><br><span class="line"><span class="number">1</span> e</span><br><span class="line"><span class="number">1</span> m</span><br><span class="line"><span class="number">1</span> t</span><br><span class="line"><span class="number">1</span> y</span><br><span class="line"><span class="number">1</span> u</span><br><span class="line"><span class="number">0</span> V</span><br><span class="line"><span class="number">1</span> <span class="number">7</span></span><br><span class="line"><span class="number">1</span> <span class="number">1</span></span><br><span class="line"><span class="number">1</span> <span class="number">4</span></span><br><span class="line"><span class="number">0</span> <span class="number">5</span></span><br><span class="line"><span class="number">0</span> <span class="number">3</span></span><br><span class="line"><span class="number">0</span> <span class="number">1</span></span><br><span class="line"><span class="number">1</span> <span class="number">6</span></span><br><span class="line"><span class="number">1</span> <span class="number">2</span></span><br><span class="line"><span class="number">0</span> <span class="number">8</span></span><br><span class="line"><span class="number">0</span> <span class="number">4</span></span><br></pre></td></tr></table></figure>
-<h4 id="输出样例-2："><a href="#输出样例-2：" class="headerlink" title="输出样例#2："></a>输出样例#2：</h4><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">y</span><br></pre></td></tr></table></figure>
+<h3 id="输入输出样例"><a href="#输入输出样例" class="headerlink" title="输入输出样例"></a>输入输出样例</h3><h4 id="输入样例-1："><a href="#输入样例-1：" class="headerlink" title="输入样例#1："></a>输入样例#1：</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token number">7</span> <span class="token number">3</span>
+<span class="token number">0</span> singer
+<span class="token number">0</span> reader
+<span class="token number">0</span> mengbier 
+<span class="token number">1</span> thinker
+<span class="token number">1</span> archer
+<span class="token number">0</span> writer
+<span class="token number">1</span> mogician 
+<span class="token number">0</span> <span class="token number">3</span>
+<span class="token number">1</span> <span class="token number">1</span>
+<span class="token number">0</span> <span class="token number">2</span>
+</code></pre>
+<h4 id="输出样例-1："><a href="#输出样例-1：" class="headerlink" title="输出样例#1："></a>输出样例#1：</h4><pre class=" language-cpp"><code class="language-cpp">writer
+</code></pre>
+<h4 id="输入样例-2："><a href="#输入样例-2：" class="headerlink" title="输入样例#2："></a>输入样例#2：</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token number">10</span> <span class="token number">10</span>
+<span class="token number">1</span> C
+<span class="token number">0</span> r
+<span class="token number">0</span> P
+<span class="token number">1</span> d
+<span class="token number">1</span> e
+<span class="token number">1</span> m
+<span class="token number">1</span> t
+<span class="token number">1</span> y
+<span class="token number">1</span> u
+<span class="token number">0</span> V
+<span class="token number">1</span> <span class="token number">7</span>
+<span class="token number">1</span> <span class="token number">1</span>
+<span class="token number">1</span> <span class="token number">4</span>
+<span class="token number">0</span> <span class="token number">5</span>
+<span class="token number">0</span> <span class="token number">3</span>
+<span class="token number">0</span> <span class="token number">1</span>
+<span class="token number">1</span> <span class="token number">6</span>
+<span class="token number">1</span> <span class="token number">2</span>
+<span class="token number">0</span> <span class="token number">8</span>
+<span class="token number">0</span> <span class="token number">4</span>
+</code></pre>
+<h4 id="输出样例-2："><a href="#输出样例-2：" class="headerlink" title="输出样例#2："></a>输出样例#2：</h4><pre class=" language-cpp"><code class="language-cpp">y
+</code></pre>
 <h3 id="说明"><a href="#说明" class="headerlink" title="说明"></a>说明</h3><p>【样例1说明】<br>这组数据就是【题目描述】 中提到的例子。<br>【子任务】<br>子任务会给出部分测试数据的特点。 如果你在解决题目中遇到了困难, 可以尝试只解决一部分测试数据。<br>每个测试点的数据规模及特点如下表:</p>
 <p>其中一些简写的列意义如下:<br>• 全朝内: 若为“√”, 表示该测试点保证所有的玩具小人都朝向圈内;<br>全左数:若为“√”,表示该测试点保证所有的指令都向左数,即对任意的<br>1≤z≤m, ai=0;<br>s,= 1:若为“√”,表示该测试点保证所有的指令都只数1个,即对任意的<br>1≤z≤m, si=1;<br>职业长度为1 :若为“√”,表示该测试点保证所有玩具小人的职业一定是一个<br>长度为1的字符串。</p>
 <h2 id="讲解"><a href="#讲解" class="headerlink" title="讲解"></a>讲解</h2><p>纯模拟，加很简单的状态转移</p>
 <p>状态转移我是这么写的</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (Direction == <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span> (info[pos].face == <span class="number">0</span>)</span><br><span class="line">				pos = (pos - length + n) % n;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				pos = (pos + length + n) % n;</span><br><span class="line">			<span class="keyword">if</span> (pos == <span class="number">0</span>)</span><br><span class="line">				pos = n;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (Direction == <span class="number">1</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span> (info[pos].face == <span class="number">0</span>)</span><br><span class="line">				pos = (pos + length + n) % n;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				pos = (pos - length + n) % n;</span><br><span class="line">			<span class="keyword">if</span> (pos == <span class="number">0</span>)</span><br><span class="line">				pos = n;</span><br><span class="line">		&#125;</span><br></pre></td></tr></table></figure>
+<pre class=" language-cpp"><code class="language-cpp"><span class="token keyword">if</span> <span class="token punctuation">(</span>Direction <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>info<span class="token punctuation">[</span>pos<span class="token punctuation">]</span><span class="token punctuation">.</span>face <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+                pos <span class="token operator">=</span> <span class="token punctuation">(</span>pos <span class="token operator">-</span> length <span class="token operator">+</span> n<span class="token punctuation">)</span> <span class="token operator">%</span> n<span class="token punctuation">;</span>
+            <span class="token keyword">else</span>
+                pos <span class="token operator">=</span> <span class="token punctuation">(</span>pos <span class="token operator">+</span> length <span class="token operator">+</span> n<span class="token punctuation">)</span> <span class="token operator">%</span> n<span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>pos <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+                pos <span class="token operator">=</span> n<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>Direction <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>info<span class="token punctuation">[</span>pos<span class="token punctuation">]</span><span class="token punctuation">.</span>face <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+                pos <span class="token operator">=</span> <span class="token punctuation">(</span>pos <span class="token operator">+</span> length <span class="token operator">+</span> n<span class="token punctuation">)</span> <span class="token operator">%</span> n<span class="token punctuation">;</span>
+            <span class="token keyword">else</span>
+                pos <span class="token operator">=</span> <span class="token punctuation">(</span>pos <span class="token operator">-</span> length <span class="token operator">+</span> n<span class="token punctuation">)</span> <span class="token operator">%</span> n<span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>pos <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+                pos <span class="token operator">=</span> n<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+</code></pre>
 <p>然后，这里是代码</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;cstdlib&gt;</span></span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">qyb</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">	<span class="keyword">int</span> face;</span><br><span class="line">	<span class="keyword">char</span> name[<span class="number">11</span>];</span><br><span class="line">&#125;info[<span class="number">100001</span>];</span><br><span class="line"><span class="keyword">int</span> Direction, pos = <span class="number">1</span>, length, n, m;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">	<span class="keyword">int</span> i;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; n &gt;&gt; m;</span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= n; i++) &#123;</span><br><span class="line">		<span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; info[i].face;</span><br><span class="line">		<span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; info[i].name;</span><br><span class="line">	&#125;<span class="comment">//到现在为止，完成了对小人的信息读入；</span></span><br><span class="line">	<span class="keyword">for</span> (i = <span class="number">1</span>; i &lt;= m; i++) &#123;</span><br><span class="line">		<span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; Direction;</span><br><span class="line">		<span class="built_in">std</span>::<span class="built_in">cin</span> &gt;&gt; length;</span><br><span class="line">		<span class="keyword">if</span> (Direction == <span class="number">0</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span> (info[pos].face == <span class="number">0</span>)</span><br><span class="line">				pos = (pos - length + n) % n;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				pos = (pos + length + n) % n;</span><br><span class="line">			<span class="keyword">if</span> (pos == <span class="number">0</span>)</span><br><span class="line">				pos = n;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (Direction == <span class="number">1</span>) &#123;</span><br><span class="line">			<span class="keyword">if</span> (info[pos].face == <span class="number">0</span>)</span><br><span class="line">				pos = (pos + length + n) % n;</span><br><span class="line">			<span class="keyword">else</span></span><br><span class="line">				pos = (pos - length + n) % n;</span><br><span class="line">			<span class="keyword">if</span> (pos == <span class="number">0</span>)</span><br><span class="line">				pos = n;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="built_in">std</span>::<span class="built_in">cout</span> &lt;&lt; info[pos].name &lt;&lt; <span class="built_in">std</span>::<span class="built_in">endl</span>;</span><br><span class="line">	<span class="keyword">return</span>  <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;cstdlib></span></span>
+<span class="token keyword">struct</span> qyb
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> face<span class="token punctuation">;</span>
+    <span class="token keyword">char</span> name<span class="token punctuation">[</span><span class="token number">11</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>info<span class="token punctuation">[</span><span class="token number">100001</span><span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token keyword">int</span> Direction<span class="token punctuation">,</span> pos <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">,</span> length<span class="token punctuation">,</span> n<span class="token punctuation">,</span> m<span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    <span class="token keyword">int</span> i<span class="token punctuation">;</span>
+    std<span class="token operator">::</span>cin <span class="token operator">>></span> n <span class="token operator">>></span> m<span class="token punctuation">;</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        std<span class="token operator">::</span>cin <span class="token operator">>></span> info<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>face<span class="token punctuation">;</span>
+        std<span class="token operator">::</span>cin <span class="token operator">>></span> info<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>name<span class="token punctuation">;</span>
+    <span class="token punctuation">}</span><span class="token comment" spellcheck="true">//到现在为止，完成了对小人的信息读入；</span>
+    <span class="token keyword">for</span> <span class="token punctuation">(</span>i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> m<span class="token punctuation">;</span> i<span class="token operator">++</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        std<span class="token operator">::</span>cin <span class="token operator">>></span> Direction<span class="token punctuation">;</span>
+        std<span class="token operator">::</span>cin <span class="token operator">>></span> length<span class="token punctuation">;</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>Direction <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>info<span class="token punctuation">[</span>pos<span class="token punctuation">]</span><span class="token punctuation">.</span>face <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+                pos <span class="token operator">=</span> <span class="token punctuation">(</span>pos <span class="token operator">-</span> length <span class="token operator">+</span> n<span class="token punctuation">)</span> <span class="token operator">%</span> n<span class="token punctuation">;</span>
+            <span class="token keyword">else</span>
+                pos <span class="token operator">=</span> <span class="token punctuation">(</span>pos <span class="token operator">+</span> length <span class="token operator">+</span> n<span class="token punctuation">)</span> <span class="token operator">%</span> n<span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>pos <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+                pos <span class="token operator">=</span> n<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        <span class="token keyword">if</span> <span class="token punctuation">(</span>Direction <span class="token operator">==</span> <span class="token number">1</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>info<span class="token punctuation">[</span>pos<span class="token punctuation">]</span><span class="token punctuation">.</span>face <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+                pos <span class="token operator">=</span> <span class="token punctuation">(</span>pos <span class="token operator">+</span> length <span class="token operator">+</span> n<span class="token punctuation">)</span> <span class="token operator">%</span> n<span class="token punctuation">;</span>
+            <span class="token keyword">else</span>
+                pos <span class="token operator">=</span> <span class="token punctuation">(</span>pos <span class="token operator">-</span> length <span class="token operator">+</span> n<span class="token punctuation">)</span> <span class="token operator">%</span> n<span class="token punctuation">;</span>
+            <span class="token keyword">if</span> <span class="token punctuation">(</span>pos <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">)</span>
+                pos <span class="token operator">=</span> n<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+    std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> info<span class="token punctuation">[</span>pos<span class="token punctuation">]</span><span class="token punctuation">.</span>name <span class="token operator">&lt;&lt;</span> std<span class="token operator">::</span>endl<span class="token punctuation">;</span>
+    <span class="token keyword">return</span>  <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
 <p>用了一个结构体，操作</p>
 <p>有问题的可以通过</p>
 <p><strong><a href="https://qyb1228.github.io/contact" target="_blank" rel="noopener">This Way</a></strong></p>
