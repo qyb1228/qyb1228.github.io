@@ -1,0 +1,305 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<link rel="bookmark"  type="image/x-icon"  href="/img/logo_miccall.png"/>
+	 <link rel="shortcut icon" href="/img/logo_miccall.png">
+	
+			
+    <title>
+    JC Zhang
+    </title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="/css/mic_main.css" />
+    <link rel="stylesheet" href="/css/dropdownMenu.css" />
+    
+    	<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+    <noscript>
+        <link rel="stylesheet" href="/css/noscript.css" />
+    </noscript>
+
+			    <script src="/js/jquery.min.js"></script>
+    <script src="/js/jquery.scrollex.min.js"></script>
+    <script src="/js/jquery.scrolly.min.js"></script>
+    <script src="/js/skel.min.js"></script>
+    <script src="/js/util.js"></script>
+    <script src="/js/main.js"></script>
+	
+<link rel="stylesheet" href="/css/prism.css" type="text/css"></head>
+    
+		
+<!-- Layouts -->
+
+
+
+<!--  代码渲染  -->
+<link rel="stylesheet" href="/css/prism_coy.css" />
+<link rel="stylesheet" href="/css/typo.css" />
+<!-- 文章页 -->
+<body class="is-loading">
+    <!-- Wrapper 外包 s-->
+    <div id="wrapper" class="fade-in">
+        <!-- Intro 头部显示 s -->
+        <!-- Intro 头部显示 e -->
+        <!-- Header 头部logo start -->
+        <header id="header">
+    <a href="/" class="logo">JC-Zhang</a>
+</header>
+        <!-- Nav 导航条 start -->
+        <nav id="nav" class="special" >
+            <ul class="menu links" >
+			<!-- Homepage  主页  --> 
+			<li >
+	            <a href="/" rel="nofollow">Home</a>
+	        </li>
+			<!-- categories_name  分类   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">categories</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="category-link" href="/categories/Algorithm/">Algorithm</a></li><li><a class="category-link" href="/categories/C/">C++</a></li><li><a class="category-link" href="/categories/Essay/">Essay</a></li><li><a class="category-link" href="/categories/Problem/">Problem</a>
+	                    </ul>
+	        </li>
+	        
+	        <!-- archives  归档   --> 
+	        
+	        <li class="active">
+	            <a href="#s1">archives</a>
+	                    <ul class="submenu">
+	                        <li>
+	                        <a class="archive-link" href="/archives/2099/12/">December 2099</a></li><li><a class="archive-link" href="/archives/2018/01/">January 2018</a></li><li><a class="archive-link" href="/archives/2017/12/">December 2017</a>
+	                    </ul>
+	        </li>
+	        
+	        
+		        <!-- Pages 自定义   -->
+		        
+		        <li>
+		            <a href="/about/" title="About">
+		                About
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/group/" title="Link">
+		                Link
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/gallery/" title="Gallery">
+		                Gallery
+		            </a>
+		        </li>
+		        
+		        <li>
+		            <a href="/tags/" title="Tags">
+		                Tags
+		            </a>
+		        </li>
+		        
+
+
+            </ul>
+            <!-- icons 图标   -->
+			<ul class="icons">
+		            
+		                <li><a href="https://github.com/qyb1228.github.io" class="icon fa-github"><span class="label">GitHub</span></a></li>
+		            
+		            
+		            
+		            
+			</ul>
+</nav>
+
+        <div id="main" >
+            <div class ="post_page_title_img" style="height: 25rem;background-image: url(http://img.tuku.cn/file_big/201708/3b901c7d1be74546b4dabef831b29a30.jpg);background-position: center; background-repeat:no-repeat; background-size:cover;-moz-background-size:cover;overflow:hidden;" >
+                <a href="#" style="padding: 4rem 4rem 2rem 4rem ;"><h2 >luogu p1507</h2></a>
+            </div>
+            <!-- Post -->
+            <div class="typo" style="padding: 3rem;">
+                <h1 id="NASA的食物计划"><a href="#NASA的食物计划" class="headerlink" title="NASA的食物计划"></a>NASA的食物计划</h1><h2 id="Problem"><a href="#Problem" class="headerlink" title="Problem"></a>Problem</h2><h3 id="題目背景"><a href="#題目背景" class="headerlink" title="題目背景"></a>題目背景</h3><p>NASA(美国航空航天局)因为航天飞机的隔热瓦等其他安</p>
+<p>全技术问题一直大伤脑筋,因此在各方压力下终止了航天</p>
+<p>飞机的历史,但是此类事情会不会在以后发生，谁也无法</p>
+<p>保证,在遇到这类航天问题时,解决方法也许只能让航天</p>
+<p>员出仓维修,但是多次的维修会消耗航天员大量的能量,</p>
+<p>因此NASA便想设计一种食品方案,让体积和承重有限的</p>
+<p>条件下多装载一些高卡路里的食物.</p>
+<h3 id="題目描述"><a href="#題目描述" class="headerlink" title="題目描述"></a>題目描述</h3><p>航天飞机的体积有限,当然如果载过重的物品,燃料会浪费很多钱,</p>
+<p>每件食品都有各自的体积、质量以及所含卡路里,在告诉你体积</p>
+<p>和质量的最大值的情况下,请输出能达到的食品方案所含卡路里</p>
+<p>的最大值,当然每个食品只能使用一次.</p>
+<h3 id="輸入輸出格式"><a href="#輸入輸出格式" class="headerlink" title="輸入輸出格式"></a>輸入輸出格式</h3><h4 id="输入格式："><a href="#输入格式：" class="headerlink" title="输入格式："></a>输入格式：</h4><p>第一行 两个数 体积最大值(&lt;400)和质量最大值(&lt;400)</p>
+<p>第二行 一个数 食品总数N(&lt;50).</p>
+<p>第三行－第3+N行</p>
+<p>每行三个数 体积(&lt;400) 质量(&lt;400) 所含卡路里(&lt;500)</p>
+<h4 id="输出格式："><a href="#输出格式：" class="headerlink" title="输出格式："></a>输出格式：</h4><p>一个数 所能达到的最大卡路里(int范围内)</p>
+<h3 id="輸入輸出樣例"><a href="#輸入輸出樣例" class="headerlink" title="輸入輸出樣例"></a>輸入輸出樣例</h3><h4 id="輸入樣例-1："><a href="#輸入樣例-1：" class="headerlink" title="輸入樣例#1："></a>輸入樣例#1：</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token number">320</span> <span class="token number">350</span>
+<span class="token number">4</span>
+<span class="token number">160</span> <span class="token number">40</span> <span class="token number">120</span>
+<span class="token number">80</span> <span class="token number">110</span> <span class="token number">240</span>
+<span class="token number">220</span> <span class="token number">70</span> <span class="token number">310</span>
+<span class="token number">40</span> <span class="token number">400</span> <span class="token number">220</span>
+</code></pre>
+<h4 id="輸出樣例-1："><a href="#輸出樣例-1：" class="headerlink" title="輸出樣例#1："></a>輸出樣例#1：</h4><pre class=" language-cpp"><code class="language-cpp"><span class="token number">550</span>
+</code></pre>
+<h2 id="講解"><a href="#講解" class="headerlink" title="講解"></a>講解</h2><p>這道題是<strong>二維費用</strong>的<strong>背包</strong>問題</p>
+<p>其實不難 但對蒟蒻來説很難啊</p>
+<p><code>qwq--qwq</code></p>
+<p>言歸正傳</p>
+<h4 id="開始講題"><a href="#開始講題" class="headerlink" title="開始講題"></a>開始講題</h4><p>二维费用的背包问题是指：对于每件物品，具有两种不同的费用；选择这件物品必须同时付出这两种代价；对于每种代价都有一个可付出的最大值（背包容量）。问怎样选择物品可以得到最大的价值。设这两种代价分别为代价1和代价2，第i件物品所需的两种代价分别为a[i]和b[i]。两种代价可付出的最大值（两种背包容量）分别为V和U。物品的价值为c[i]。</p>
+<p>费用加了一维，只需状态也加一维即可。设f[i][v][u]表示前i件物品付出两种代价分别为v和u时可获得的最大价值。</p>
+<p>状态转移方程就是：<code>f[i][v][u]=max{f[i-1][v][u],f[i-1][v-a[i]][u-b[i]]+c[i]}</code>。如前述方法，可以只使用二维的数组：当每件物品只可以取一次时变量v和u采用逆序的循环，当物品有如完全背包问题时采用顺序的循环。当物品有如多重背包问题时拆分物品。</p>
+<p>代碼如下</p>
+<pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span><span class="token string">&lt;iostream></span></span>
+<span class="token macro property">#<span class="token directive keyword">define</span> r register</span>
+<span class="token keyword">auto</span> max <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">(</span><span class="token keyword">const</span> <span class="token keyword">int</span> x<span class="token punctuation">,</span> <span class="token keyword">const</span> <span class="token keyword">int</span> y<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token keyword">if</span> <span class="token punctuation">(</span>x <span class="token operator">></span> y<span class="token punctuation">)</span> <span class="token keyword">return</span> x<span class="token punctuation">;</span> <span class="token keyword">else</span> <span class="token keyword">return</span> y<span class="token punctuation">;</span> <span class="token punctuation">}</span><span class="token punctuation">;</span>
+<span class="token keyword">const</span> <span class="token keyword">int</span> maxn <span class="token operator">=</span> <span class="token number">1001</span><span class="token punctuation">;</span>
+<span class="token keyword">class</span> <span class="token class-name">bing</span>
+<span class="token punctuation">{</span>
+<span class="token keyword">public</span><span class="token operator">:</span>
+    <span class="token keyword">inline</span> <span class="token keyword">void</span> <span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        std<span class="token operator">::</span>cin <span class="token operator">>></span> vi <span class="token operator">>></span> mi <span class="token operator">>></span> n<span class="token punctuation">;</span>
+        <span class="token keyword">for</span> <span class="token punctuation">(</span>r <span class="token keyword">int</span> i <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span> i <span class="token operator">&lt;=</span> n<span class="token punctuation">;</span> <span class="token operator">++</span>i<span class="token punctuation">)</span>
+            std<span class="token operator">::</span>cin <span class="token operator">>></span> v<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">>></span> m<span class="token punctuation">[</span>i<span class="token punctuation">]</span> <span class="token operator">>></span> u<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">inline</span> <span class="token keyword">void</span> <span class="token function">opera</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span>r <span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span><span class="token operator">++</span>i<span class="token punctuation">)</span>
+            <span class="token keyword">for</span><span class="token punctuation">(</span>r <span class="token keyword">int</span> j<span class="token operator">=</span>vi<span class="token punctuation">;</span>j<span class="token operator">>=</span>v<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token operator">--</span>j<span class="token punctuation">)</span>
+                <span class="token keyword">for</span> <span class="token punctuation">(</span>r <span class="token keyword">int</span> k <span class="token operator">=</span> mi<span class="token punctuation">;</span> k <span class="token operator">>=</span> m<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span> <span class="token operator">--</span>k<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+                    f<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span>k<span class="token punctuation">]</span> <span class="token operator">=</span> <span class="token function">max</span><span class="token punctuation">(</span>f<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">,</span> f<span class="token punctuation">[</span>j <span class="token operator">-</span> v<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">[</span>k <span class="token operator">-</span> m<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token operator">+</span> u<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+                <span class="token punctuation">}</span>
+    <span class="token punctuation">}</span>
+
+    <span class="token operator">~</span><span class="token function">bing</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        std<span class="token operator">::</span>cout <span class="token operator">&lt;&lt;</span> f<span class="token punctuation">[</span>vi<span class="token punctuation">]</span><span class="token punctuation">[</span>mi<span class="token punctuation">]</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+
+<span class="token keyword">private</span><span class="token operator">:</span>
+    <span class="token keyword">int</span> vi<span class="token punctuation">,</span> mi<span class="token punctuation">,</span> n<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> f<span class="token punctuation">[</span>maxn<span class="token punctuation">]</span><span class="token punctuation">[</span>maxn<span class="token punctuation">]</span><span class="token punctuation">,</span> v<span class="token punctuation">[</span>maxn<span class="token punctuation">]</span><span class="token punctuation">,</span> m<span class="token punctuation">[</span>maxn<span class="token punctuation">]</span><span class="token punctuation">,</span> u<span class="token punctuation">[</span>maxn<span class="token punctuation">]</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span><span class="token punctuation">;</span>
+bing qyb<span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+    qyb<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    qyb<span class="token punctuation">.</span><span class="token function">opera</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre>
+<p>首先 我写了一个   $λ$   函数，即<code>max</code>函数</p>
+<p>状态转移方程:</p>
+<blockquote>
+<p><code>f[j][k] = max(f[j][k], f[j - v[i]][k - m[i]] + u[i])</code></p>
+</blockquote>
+<pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">endif</span></span>
+</code></pre>
+
+            </div>
+
+            <!-- Post Comments -->
+            
+    <!-- 使用 DISQUS_CLICK -->
+<div id="disqus-comment">
+    <div id="disqus_thread"></div>
+
+<!-- add animation -->
+<style>
+	.disqus_click_btn {
+            line-height: 30px;
+            margin: 0;
+            min-width: 50px;
+            padding: 0 14px;
+            display: inline-block;
+            font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            overflow: hidden;
+            will-change: box-shadow;
+            transition: box-shadow .2s cubic-bezier(.4, 0, 1, 1), background-color .2s cubic-bezier(.4, 0, .2, 1), color .2s cubic-bezier(.4, 0, .2, 1);
+            outline: 0;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            vertical-align: middle;
+            border: 0;
+            background: rgba(158, 158, 158, .2);
+            box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12);
+            color: #fff;
+            background-color: #7EC0EE;
+            text-shadow: 0
+        }
+</style>
+	
+<div class="btn_click_load" id="disqus_bt"> 
+    <button class="disqus_click_btn">点击查看评论</button>
+</div>
+
+<!--
+<script type="text/javascript">
+$('.btn_click_load').click(function() {
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'http-miccall-tech'; // required: replace example with your forum shortname
+
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+
+    document.getElementById('disqus_bt').style.display = "none";
+});
+</script>
+-->
+<script type="text/javascript">
+    var disqus_config = function () {
+        this.page.url = 'http://yoursite.com/2018/01/07/luogu-p1507/';  // Replace PAGE_URL with your page's canonical URL variable
+        this.page.identifier = 'http://yoursite.com/2018/01/07/luogu-p1507/'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+</script>
+
+<script type="text/javascript">
+    $('.btn_click_load').click(function() {  //click to load comments
+        (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document;
+            var s = d.createElement('script');
+            s.src = '//http-miccall-tech.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', + new Date());
+            (d.head || d.body).appendChild(s);
+        })();
+        $('.btn_click_load').css('display','none');
+    });
+</script>
+</div>
+<style>
+    #disqus-comment{
+        background-color: #eee;
+        padding: 2pc;
+    }
+</style>
+
+
+        </div>
+        <!-- Copyright 版权 start -->
+                <div id="copyright">
+            <ul>
+                <li>&copy;Powered By <a href="https://hexo.io/zh-cn/" style="border-bottom: none;">hexo</a></li>
+                <li>Design: <a href="http://miccall.tech " style="border-bottom: none;">miccall</a></li>
+            </ul>
+            
+            	<span id="busuanzi_container_site_pv">2018总访问量<span id="busuanzi_value_site_pv"></span>次</span>
+			
+        </div>
+    </div>
+</body>
+
+
+
+ 	
+</html>
